@@ -1,0 +1,94 @@
+.\" Manpage.
+.\" To correct errors or typs.
+.TH man 3 "19 April 2022" "Project_printf"
+
+.SH NAME
+_printf() - takes input and prints to standard output.
+
+.SH SYNOPSIS
+#include "main.h"
+
+.SH Sintaxis
+int _printf(const char *format, ...)
+
+.SH format
+This is the string that contains the text to be written to stdout. 
+#include <stdarg.h>
+
+.SH DESCRIPTION
+The function _printf() sends formatted output to stdout and uses format
+specifiers to convert arguments into strings. The format specifiers are:
+FORMAT outputs a specified format relative to the specifier input.
+
+.SH Return Value
+_printf() function returns the number of characters printed (excluding the null byte used to end output to strings).
+
+.B %c
+Prints the character passed as parameter
+
+.B %s
+Prints text string finished with null character.
+
+.B %%
+Prints a single '%' character
+
+.B %d
+Converts argument to signed decimal notation and print it.
+
+.B %i
+Converts argument to unsigned decimal notation and print it.
+
+.B %b
+Convert the unsigned argument to a binary and print it.
+
+.B %u
+Prints the integer unsigned decimal conversion.
+
+.B %o
+Prints the integer unsigned octal conversion.
+
+.B %x
+Unsigned hexadecimal conversion in lowercase form.
+
+.B %X
+Unsigned hexadecimal conversion uppercase form.
+
+.B %p
+Prints a memory address (Pointer).
+
+.SH EXAMPLE
+
+.RS
+#include "main.h"
+
+int main(void)
+
+{
+
+
+    _printf("%s", String);
+
+
+   _printf("I am a character %c", 'A');
+
+
+   _printf("I am an integer %d", 12);
+
+
+   _printf("I am percentage %%", %);
+
+
+    return (0);
+
+
+}
+.RE
+
+.SH SEE ALSO
+printf(3)
+
+.SH BUGS
+No known bugs.
+
+.SH AUTHOR
+Jeff Austine Ochieng and Karen Ngugi
